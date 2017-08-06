@@ -1,0 +1,7 @@
+[Activity]
+name = sistemasolar
+activity_version = 1
+bundle_id = app.sistemasolar
+exec = sugar-activity app.sistemasolar
+icon = pendiente.svg
+licence = GPLv3+
