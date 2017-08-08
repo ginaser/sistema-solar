@@ -13,6 +13,9 @@ from sugar3.activity.widgets import(
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk, GdkPixbuf
 
+from sugargame import canvas
+from puzzle import Main
+
 logger = logging.getLogger(__name__)
 
 class SistemaSolar(activity.Activity):
@@ -22,8 +25,11 @@ class SistemaSolar(activity.Activity):
 		self.max_participants =1
 
 		self.agregar_toolbar()
-		self.agregar_canvas()
-		
+		self.game = Main()
+		self._pygamecanvas = canvas.PygameCanvas(self)
+		self.set_canvas(self._pygamecanvas)
+		self._pygamecanvas.grab_focus()
+		self._pygamecanvas.run_pygame(self.game.correr)
 
 
 	def agregar_toolbar(self):
