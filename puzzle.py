@@ -27,8 +27,8 @@ class Main(ClaseBase):
         self.ancho = rect_superficie.width
         self.alto = rect_superficie.height
         self.superficie.fill(COLORES['blanco'])
-        self.fuente = pygame.font.SysFont("monospace", 45)
-        texto = self.fuente.render("BIENVENIDOS!", 1, COLORES['rojo'])
+        self.fuente = pygame.font.SysFont("monospace", 60)
+        texto = self.fuente.render("BIENVENID@S!", 1, COLORES['verde'])
         self.superficie.blit(texto, self.convertir_porcentaje(25, 40))
 
         pygame.display.update()
@@ -67,7 +67,7 @@ class Rompecabeza(ClaseBase):
         self.superficie = pygame.display.get_surface()
         self.fondo = pygame.Surface((self.ancho, self.alto))
         self.fondo.fill(COLORES['gris'])
-        self.fuente = pygame.font.SysFont("monospace", 45)
+        self.fuente = pygame.font.SysFont("monospace", 30)
 
     def correr(self):
         #poniendo el fondo
